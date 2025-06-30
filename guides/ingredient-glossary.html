@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplement Ingredient Glossary - Supplement Spotlight</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        .glossary-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: var(--white-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        .glossary-nav a {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: var(--transition-smooth);
+        }
+        .glossary-nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+        }
+        .glossary-section { margin-bottom: 2rem; }
+        .glossary-section h2 { 
+            font-size: 3rem;
+            color: var(--accent-color);
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .ingredient-entry {
+            background: var(--white-color);
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            margin-top: 1.5rem;
+        }
+        .ingredient-entry h3 { margin-top: 0; }
+        .ingredient-entry strong { color: var(--secondary-color); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">Supplement<span>Spotlight</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../categories/protein-powders.html">Protein</a></li>
+                    <li><a href="../comparisons/best-protein-powders.html">Best Of</a></li>
+                    <li><a href="ingredient-glossary.html" class="active">Glossary</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <main class="section">
+        <div class="container" style="max-width: 900px;">
+            <header class="review-header" style="border: none; padding-bottom: 0;">
+                <h1>The Ultimate Supplement Ingredient Glossary</h1>
+                <p class="review-meta">Demystify supplement labels with our A-Z guide to the most common ingredients in sports nutrition.</p>
+            </header>
+
+            <nav class="glossary-nav" aria-label="Ingredient Alphabet Navigation">
+                <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a>
+                <!-- Add all letters of the alphabet -->
+            </nav>
+
+            <section id="A" class="glossary-section">
+                <h2>A</h2>
+                <div class="ingredient-entry">
+                    <h3>Ashwagandha</h3>
+                    <p><strong>What it is:</strong> An adaptogenic herb used in traditional medicine.</p>
+                    <p><strong>What it does:</strong> Primarily helps the body manage stress by lowering cortisol levels. May also improve strength and recovery.</p>
+                    <p><strong>Common Dosage:</strong> 300-600 mg per day.</p>
+                </div>
+            </section>
+            
+            <section id="B" class="glossary-section">
+                <h2>B</h2>
+                <div class="ingredient-entry">
+                    <h3>Beta-Alanine</h3>
+                    <p><strong>What it is:</strong> A non-essential amino acid.</p>
+                    <p><strong>What it does:</strong> Increases carnosine levels in muscles, which buffers acid and delays fatigue during high-intensity exercise (the "tingles" are a common, harmless side effect).</p>
+                    <p><strong>Common Dosage:</strong> 3.2-6.4 grams per day.</p>
+                </div>
+            </section>
+
+            <section id="C" class="glossary-section">
+                <h2>C</h2>
+                <div class="ingredient-entry">
+                    <h3>Creatine Monohydrate</h3>
+                    <p><strong>What it is:</strong> One of the most studied and effective supplements in history.</p>
+                    <p><strong>What it does:</strong> Helps muscles produce energy (ATP) during heavy lifting or high-intensity exercise, leading to increased strength, power, and muscle mass.</p>
+                    <p><strong>Common Dosage:</strong> 3-5 grams per day.</p>
+                </div>
+                <div class="ingredient-entry">
+                    <h3>L-Citrulline</h3>
+                    <p><strong>What it is:</strong> An amino acid that converts to L-Arginine in the kidneys.</p>
+                    <p><strong>What it does:</strong> Boosts nitric oxide production more effectively than arginine itself, leading to improved blood flow, better muscle "pumps," and enhanced endurance.</p>
+                    <p><strong>Common Dosage:</strong> 6-8 grams (as Citrulline Malate) 30-60 minutes before exercise.</p>
+                </div>
+            </section>
+            <!-- Add more sections for other letters -->
+
+        </div>
+    </main>
+
+    <footer class="footer">...</footer>
+</body>
+</html>

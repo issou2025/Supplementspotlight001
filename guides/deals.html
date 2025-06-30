@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplement Deals & Offers - Supplement Spotlight</title>
+    <meta name="description" content="Find the latest deals, discounts, and coupon codes for top supplement brands. Save money on protein, pre-workouts, and more.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/affiliate-tracking.js" defer></script>
+    <style>
+        .deal-card {
+            background: var(--white-color);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .deal-info {
+            flex-grow: 1;
+        }
+        .deal-info h3 {
+            margin-top: 0;
+        }
+        .deal-brand {
+            font-weight: 700;
+            color: var(--accent-color);
+            text-transform: uppercase;
+        }
+        .deal-action .btn {
+            width: 100%;
+            min-width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Supplement<span>Spotlight</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="comparisons/best-protein-powders.html">Best Of</a></li>
+                    <li><a href="deals.html" class="active">Deals</a></li>
+                    <li><a href="guides/ingredient-glossary.html">Glossary</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container" style="max-width: 900px;">
+            <header class="review-header" style="border: none; padding-bottom: 0;">
+                <h1>Today's Top Supplement Deals</h1>
+                <p class="review-meta">Our curated list of the best sales and discounts from trusted brands. Updated weekly.</p>
+            </header>
+
+            <div class="deals-container">
+                <!-- DEAL 1 -->
+                <div class="deal-card">
+                    <div class="deal-info">
+                        <p class="deal-brand">Myprotein</p>
+                        <h3>Up to 45% Off Sitewide + Free Shipping</h3>
+                        <p>A huge sale on their entire range of products, including their popular Impact Whey Isolate.</p>
+                    </div>
+                    <div class="deal-action">
+                        <a href="#" class="btn affiliate-link" data-product-name="Myprotein Sale">Get Deal</a>
+                    </div>
+                </div>
+
+                <!-- DEAL 2 -->
+                <div class="deal-card">
+                    <div class="deal-info">
+                        <p class="deal-brand">Transparent Labs</p>
+                        <h3>10% Off with Code SPOTLIGHT10</h3>
+                        <p>Use our exclusive code to get a discount on their high-quality, clinically-dosed supplements like the BULK pre-workout.</p>
+                    </div>
+                    <div class="deal-action">
+                        <a href="#" class="btn affiliate-link" data-product-name="Transparent Labs Coupon">Get Deal</a>
+                    </div>
+                </div>
+
+                <!-- DEAL 3 -->
+                <div class="deal-card">
+                    <div class="deal-info">
+                        <p class="deal-brand">Optimum Nutrition on Amazon</p>
+                        <h3>20% Off Gold Standard 100% Whey (5lb Tub)</h3>
+                        <p>A limited-time offer on Amazon for the world's best-selling protein powder. A great time to stock up.</p>
+                    </div>
+                    <div class="deal-action">
+                        <a href="#" class="btn affiliate-link" data-product-name="ON Gold Standard Sale">Get Deal</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">...</footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* --- Review-Specific Styles --- */
+.review-header {
+    text-align: center; padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+}
+.review-header .product-image {
+    max-width: 250px; margin-bottom: 1.5rem; padding: 1.5rem;
+    border-radius: var(--border-radius); background-color: #fff;
+    border: 1px solid var(--border-color); box-shadow: var(--shadow);
+}
+.review-header h1 { font-size: 3rem; }
+.review-meta {
+    font-size: 0.9rem; color: #777; margin-top: 1rem; font-family: var(--font-body);
+}
+
+.review-content { max-width: 800px; margin: 0 auto; }
+.review-content h2 {
+    font-size: 2.2rem; margin-top: 3.5rem; padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* --- Pros and Cons List --- */
+.pros-cons-container {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2rem; margin: 3rem 0;
+}
+.pros-cons-list {
+    list-style: none; padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    background: var(--white-color);
+}
+.pros-cons-list h3 {
+    font-family: var(--font-heading); margin-top: 0;
+    padding-bottom: 0.75rem; margin-bottom: 1.5rem;
+    font-size: 1.6rem; text-align: center;
+}
+.pros-cons-list li {
+    padding-left: 2.5rem; position: relative; margin-bottom: 1rem;
+    font-size: 1rem; line-height: 1.6;
+}
+.pros-cons-list li::before {
+    position: absolute; left: 0; top: 0;
+    font-size: 1.5rem; font-weight: 900;
+}
+
+/* Pros List */
+.pros-list h3 { color: #2C5F2D; }
+.pros-list li::before { content: '✓'; color: #2C5F2D; }
+
+/* Cons List */
+.cons-list h3 { color: #A44A3F; }
+.cons-list li::before { content: '✗'; color: #A44A3F; }
+
+/* --- Final Verdict Box --- */
+.verdict-box {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F5F3EF 100%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 3rem; text-align: center;
+    margin: 4rem 0; position: relative;
+    box-shadow: var(--shadow);
+}
+.verdict-box::before {
+    content: '🏆';
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+.verdict-box h2 {
+    margin-top: 0; border: none; font-size: 2.5rem;
+}
+.rating {
+    font-family: var(--font-heading); font-size: 5rem;
+    font-weight: 900; color: var(--primary-color);
+    margin: 1rem 0; line-height: 1;
+    -webkit-text-stroke: 1.5px var(--secondary-color);
+    text-shadow: 4px 4px 0px var(--border-color);
+}
+.rating span {
+    font-family: var(--font-body); font-size: 1.5rem; font-weight: 700;
+    color: var(--text-color); -webkit-text-stroke: 0; text-shadow: none;
+    vertical-align: middle;
+}

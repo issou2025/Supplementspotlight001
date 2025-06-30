@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Reviews – Supplement Spotlight</title>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1963782565227057" crossorigin="anonymous"></script>
+  <meta name="description" content="Browse all supplement reviews from Supplement Spotlight. Find the best protein powders, pre-workouts, vitamins, and more.">
+  <meta name="keywords" content="all reviews, supplement reviews, protein powder reviews, pre-workout reviews, vitamin reviews, supplement spotlight">
+  <link rel="canonical" href="https://www.supplementspotlight.com/reviews/index.html">
+  <meta property="og:title" content="All Reviews – Supplement Spotlight">
+  <meta property="og:description" content="Browse all supplement reviews from Supplement Spotlight.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.supplementspotlight.com/reviews/index.html">
+  <meta property="og:site_name" content="Supplement Spotlight">
+  <meta property="og:image" content="https://www.supplementspotlight.com/assets/images/og-default.jpg">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Filter System Styles */
+    .filters-section {
+      margin-bottom: var(--spacing-xl);
+      padding: var(--spacing-lg);
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .filters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xs);
+    }
+
+    .filter-group label {
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .filter-group select,
+    .search-input {
+      padding: var(--spacing-sm);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-body);
+      transition: all var(--transition-normal);
+    }
+
+    .filter-group select:focus,
+    .search-input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 2px var(--primary-glow);
+    }
+
+    .search-input {
+      width: 100%;
+      padding-left: 40px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236366f1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: 12px center;
+    }
+
+    .filter-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-xs);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .filter-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      background: var(--primary-glow);
+      color: var(--primary-color);
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .filter-tag:hover {
+      background: var(--primary-color);
+      color: var(--text-white);
+    }
+
+    .filter-tag i {
+      font-size: 0.75rem;
+    }
+
+    /* Rating Stars */
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      margin: var(--spacing-xs) 0;
+    }
+
+    .stars {
+      color: var(--secondary-color);
+    }
+
+    .rating-text {
+      color: var(--text-light);
+      font-size: 0.875rem;
+    }
+
+    /* Card Badges */
+    .card-badge {
+      position: absolute;
+      top: var(--spacing-sm);
+      right: var(--spacing-sm);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      background: var(--primary-color);
+      color: var(--text-white);
+      border-radius: var(--radius-md);
+      font-size: 0.75rem;
+      font-weight: 600;
+      z-index: 1;
+    }
+
+    .badge-best-value {
+      background: var(--success-color);
+    }
+
+    .badge-editors-choice {
+      background: var(--secondary-color);
+    }
+
+    /* No Results Message */
+    .no-results {
+      text-align: center;
+      padding: var(--spacing-xl);
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      color: var(--text-light);
+    }
+
+    @media (max-width: 768px) {
+      .filters-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo" aria-label="Supplement Spotlight Home">
+        <span class="logo-text">Supplement<span class="logo-accent">Spotlight</span></span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../reviews/index.html" class="active">Reviews</a></li>
+          <li><a href="../brands.html">Brands</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" class="section">
+    <div class="container">
+      <h1 class="section-title">All Supplement Reviews</h1>
+      <p class="section-subtitle">Browse our unbiased, science-backed reviews of the best supplements for every goal.</p>
+      
+      <!-- Header Ad -->
+      <div class="ad-container" style="text-align: center; margin: 20px auto; max-width: 100%; overflow: hidden;">
+        <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 5px;">Advertisement</div>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1963782565227057"
+             data-ad-slot="reviews-header-ad"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      
+      <!-- Filter System -->
+      <section class="filters-section" aria-labelledby="filters-heading">
+        <h2 id="filters-heading" class="visually-hidden">Filter Reviews</h2>
+        <div class="filters-grid">
+          <div class="filter-group">
+            <label for="category-filter">Category</label>
+            <select id="category-filter" name="category">
+              <option value="">All Categories</option>
+              <option value="protein">Protein Powder</option>
+              <option value="pre-workout">Pre-Workout</option>
+              <option value="fat-burner">Fat Burner</option>
+              <option value="vitamin">Vitamins</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="brand-filter">Brand</label>
+            <select id="brand-filter" name="brand">
+              <option value="">All Brands</option>
+              <option value="optimum-nutrition">Optimum Nutrition</option>
+              <option value="dymatize">Dymatize</option>
+              <option value="vega">Vega Sport</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="rating-filter">Rating</label>
+            <select id="rating-filter" name="rating">
+              <option value="">All Ratings</option>
+              <option value="5">5 Stars</option>
+              <option value="4">4+ Stars</option>
+              <option value="3">3+ Stars</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="search-reviews">Search Reviews</label>
+            <input type="search" id="search-reviews" class="search-input" placeholder="Search by name or ingredient...">
+          </div>
+        </div>
+        <div class="filter-tags">
+          <span class="filter-tag">
+            Protein Powder <i class="fas fa-times"></i>
+          </span>
+          <span class="filter-tag">
+            4+ Stars <i class="fas fa-times"></i>
+          </span>
+        </div>
+      </section>
+
+      <!-- Reviews Grid -->
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-badge badge-editors-choice">Editor's Choice</div>
+          <div class="card-image-wrap">
+            <img src="https://via.placeholder.com/400x200/007bff/ffffff?text=Optimum+Nutrition+Whey" alt="Optimum Nutrition Gold Standard 100% Whey container" class="card-img" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="card-category">Protein Powder</span>
+            <h3 class="card-title">Optimum Nutrition Gold Standard 100% Whey</h3>
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-text">5.0 (128 reviews)</span>
+            </div>
+            <p class="card-text">Our in-depth review of the industry's most popular whey protein: ingredient breakdown, digestibility, taste, and value analysis.</p>
+            <a href="optimum-nutrition-gold-standard.html" class="btn btn-primary">Read Review</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-badge badge-best-value">Best Value</div>
+          <div class="card-image-wrap">
+            <img src="https://via.placeholder.com/400x200/007bff/ffffff?text=Dymatize+ISO100" alt="Dymatize ISO100 Hydrolyzed Whey Isolate container" class="card-img" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="card-category">Protein Powder</span>
+            <h3 class="card-title">Dymatize ISO100 Hydrolyzed Whey Isolate</h3>
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-text">4.5 (96 reviews)</span>
+            </div>
+            <p class="card-text">Evaluation of a premium fast-absorbing isolate: performance benefits vs. cost, mixability, and suitability for serious athletes.</p>
+            <a href="dymatize-iso100.html" class="btn btn-primary">Read Review</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image-wrap">
+            <img src="https://via.placeholder.com/400x200/6c757d/ffffff?text=Instant+Knockout" alt="Instant Knockout Fat Burner container" class="card-img" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="card-category">Fat Burner</span>
+            <h3 class="card-title">Instant Knockout</h3>
+            <div class="rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="rating-text">4.0 (74 reviews)</span>
+            </div>
+            <p class="card-text">A powerful fat burner designed for athletes and fighters. See our full breakdown of ingredients, effects, and value.</p>
+            <a href="instant-knockout-review.html" class="btn btn-primary">Read Review</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image-wrap">
+            <img src="https://via.placeholder.com/400x200/6c757d/ffffff?text=Coming+Soon" alt="Vega Sport Premium Protein review pending" class="card-img" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="card-category">Protein Powder</span>
+            <h3 class="card-title">Vega Sport Premium Protein (Review Pending)</h3>
+            <div class="rating">
+              <div class="stars">
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="rating-text">Review Pending</span>
+            </div>
+            <p class="card-text">Our review of this popular plant-based protein is underway. Stay tuned for a detailed analysis soon!</p>
+            <button class="btn btn-secondary" disabled>Review Pending</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Middle Content Ad -->
+      <div class="ad-container" style="text-align: center; margin: 40px auto; max-width: 100%; overflow: hidden;">
+        <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 5px;">Advertisement</div>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1963782565227057"
+             data-ad-slot="reviews-middle-ad"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- Bottom Ad Before Footer -->
+      <div class="ad-container" style="text-align: center; margin: 40px auto; max-width: 100%; overflow: hidden;">
+        <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 5px;">Advertisement</div>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1963782565227057"
+             data-ad-slot="reviews-bottom-ad"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>© 2024 Supplement Spotlight. All Rights Reserved.</p>
+      <ul class="footer-links">
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../disclaimer.html">Disclaimer</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../terms.html">Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Filter System JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get filter elements
+      const categoryFilter = document.getElementById('category-filter');
+      const brandFilter = document.getElementById('brand-filter');
+      const ratingFilter = document.getElementById('rating-filter');
+      const searchInput = document.getElementById('search-reviews');
+      const filterTags = document.querySelector('.filter-tags');
+      const cards = document.querySelectorAll('.card');
+
+      // Filter change handler
+      function handleFilterChange() {
+        const selectedCategory = categoryFilter.value.toLowerCase();
+        const selectedBrand = brandFilter.value.toLowerCase();
+        const selectedRating = ratingFilter.value;
+        const searchTerm = searchInput.value.toLowerCase();
+
+        // Update filter tags
+        updateFilterTags();
+
+        // Filter cards
+        cards.forEach(card => {
+          const category = card.querySelector('.card-category').textContent.toLowerCase();
+          const title = card.querySelector('.card-title').textContent.toLowerCase();
+          const ratingText = card.querySelector('.rating-text').textContent;
+          const rating = parseFloat(ratingText);
+
+          const matchesCategory = !selectedCategory || category.includes(selectedCategory);
+          const matchesBrand = !selectedBrand || title.includes(selectedBrand);
+          const matchesRating = !selectedRating || (rating >= parseInt(selectedRating));
+          const matchesSearch = !searchTerm || 
+                              title.includes(searchTerm) || 
+                              category.includes(searchTerm);
+
+          if (matchesCategory && matchesBrand && matchesRating && matchesSearch) {
+            card.style.display = '';
+            card.style.animation = 'fadeUp 0.5s ease-out';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Check if no results
+        checkNoResults();
+      }
+
+      // Update filter tags
+      function updateFilterTags() {
+        filterTags.innerHTML = '';
+        
+        if (categoryFilter.value) {
+          addFilterTag(categoryFilter.options[categoryFilter.selectedIndex].text, () => {
+            categoryFilter.value = '';
+            handleFilterChange();
+          });
+        }
+        
+        if (brandFilter.value) {
+          addFilterTag(brandFilter.options[brandFilter.selectedIndex].text, () => {
+            brandFilter.value = '';
+            handleFilterChange();
+          });
+        }
+        
+        if (ratingFilter.value) {
+          addFilterTag(ratingFilter.options[ratingFilter.selectedIndex].text, () => {
+            ratingFilter.value = '';
+            handleFilterChange();
+          });
+        }
+        
+        if (searchInput.value) {
+          addFilterTag(`Search: ${searchInput.value}`, () => {
+            searchInput.value = '';
+            handleFilterChange();
+          });
+        }
+      }
+
+      // Add filter tag
+      function addFilterTag(text, onRemove) {
+        const tag = document.createElement('span');
+        tag.className = 'filter-tag';
+        tag.innerHTML = `${text} <i class="fas fa-times"></i>`;
+        tag.addEventListener('click', onRemove);
+        filterTags.appendChild(tag);
+      }
+
+      // Check for no results
+      function checkNoResults() {
+        const visibleCards = document.querySelectorAll('.card[style=""]').length;
+        const noResultsMessage = document.querySelector('.no-results');
+        
+        if (visibleCards === 0) {
+          if (!noResultsMessage) {
+            const message = document.createElement('div');
+            message.className = 'no-results';
+            message.innerHTML = `
+              <i class="fas fa-search" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+              <h3>No reviews found</h3>
+              <p>Try adjusting your filters or search terms</p>
+            `;
+            document.querySelector('.cards-grid').appendChild(message);
+          }
+        } else if (noResultsMessage) {
+          noResultsMessage.remove();
+        }
+      }
+
+      // Add event listeners
+      categoryFilter.addEventListener('change', handleFilterChange);
+      brandFilter.addEventListener('change', handleFilterChange);
+      ratingFilter.addEventListener('change', handleFilterChange);
+      searchInput.addEventListener('input', handleFilterChange);
+
+      // Initialize
+      handleFilterChange();
+    });
+  </script>
+</body>
+</html> 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness & Macro Calculator - Supplement Spotlight</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/review-styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        .calculator-form {
+            background: var(--white-color);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 700; font-family: var(--font-body); }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        .form-group.full-width { grid-column: 1 / -1; }
+        #results {
+            margin-top: 3rem;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            background: linear-gradient(180deg, #FFFFFF 0%, #F5F3EF 100%);
+            border-radius: var(--border-radius);
+            display: none; /* Hidden by default */
+        }
+        #results h2 { text-align: center; }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+        .result-item h3 { font-family: var(--font-body); font-weight: 700; color: var(--accent-color); text-transform: uppercase; font-size: 1rem; }
+        .result-item p { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin: 0; }
+        .result-item span { font-size: 1rem; font-family: var(--font-body); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">Supplement<span>Spotlight</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../categories/protein-powders.html">Protein</a></li>
+                    <li><a href="../categories/pre-workout.html">Pre-Workouts</a></li>
+                    <li><a href="../tools/calculator.html" class="active">Calculators</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container" style="max-width: 800px;">
+            <header class="review-header" style="border: none; padding-bottom: 0;">
+                <h1>Calorie & Macro Calculator</h1>
+                <p class="review-meta">Estimate your daily needs to build muscle, lose fat, or maintain your weight.</p>
+            </header>
+
+            <form id="calorie-calculator" class="calculator-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div>
+                            <input type="radio" id="male" name="gender" value="male" checked> <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="height">Height (cm)</label>
+                        <input type="number" id="height" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="activity">Activity Level</label>
+                        <select id="activity">
+                            <option value="1.2">Sedentary (office job)</option>
+                            <option value="1.375">Lightly Active (1-2 days/week exercise)</option>
+                            <option value="1.55">Moderately Active (3-5 days/week exercise)</option>
+                            <option value="1.725">Very Active (6-7 days/week exercise)</option>
+                            <option value="1.9">Extra Active (physical job & hard exercise)</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="goal">Your Goal</label>
+                        <select id="goal">
+                            <option value="-500">Weight Loss (1 lb/week)</option>
+                            <option value="-250">Mild Weight Loss (0.5 lb/week)</option>
+                            <option value="0" selected>Maintain Weight</option>
+                            <option value="250">Lean Muscle Gain</option>
+                            <option value="500">Bulk / Fast Gain</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Calculate My Needs</button>
+            </form>
+
+            <div id="results"></div>
+        </div>
+    </main>
+    
+    <footer class="footer">...</footer>
+    <script src="../js/main-calculator.js"></script>
+</body>
+</html>

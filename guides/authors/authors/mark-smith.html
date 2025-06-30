@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Mark Smith - Supplement Spotlight</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        .author-header {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            background: var(--white-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+        .author-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+        }
+        .author-header h1 {
+            margin-bottom: 0.25rem;
+        }
+        .author-header .author-title {
+            font-family: var(--font-body);
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        .author-bio {
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">Supplement<span>Spotlight</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../comparisons/best-protein-powders.html">Best Of</a></li>
+                    <li><a href="../about.html" class="active">About</a></li>
+                    <!-- Add other links -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container" style="max-width: 900px;">
+            <div class="author-header">
+                <img src="https://via.placeholder.com/150x150/264624/FFFFFF?text=Mark" alt="Headshot of Mark Smith">
+                <div>
+                    <h1>Mark Smith</h1>
+                    <p class="author-title">Certified Personal Trainer & Lead Product Tester</p>
+                </div>
+            </div>
+
+            <div class="author-bio">
+                <p>Mark is the hands-on force behind our reviews. With over a decade of experience as a Certified Personal Trainer (CPT) and a competitive powerlifter, he understands what works in the real world, not just in the lab. He is responsible for personally testing every product for taste, mixability, and performance during his rigorous training sessions.</p>
+                <p>His no-nonsense approach helps cut through marketing claims to give our readers a practical, real-world perspective on whether a supplement is truly worth their investment.</p>
+            </div>
+
+            <section id="author-articles" class="section" style="padding-top: 4rem;">
+                <h2 class="section-title">Articles by Mark Smith</h2>
+                <div class="grid-container">
+                    <!-- Link to articles written by this author -->
+                    <a href="../reviews/instant-knockout-review.html" class="card">
+                        <div class="card-content">
+                            <span class="card-category">Review</span>
+                            <h3>Instant Knockout Cut Review</h3>
+                        </div>
+                    </a>
+                    <a href="../guides/supplement-timing-guide.html" class="card">
+                        <div class="card-content">
+                            <span class="card-category">Guide</span>
+                            <h3>The Ultimate Supplement Timing Guide</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">...</footer>
+</body>
+</html>
